@@ -1,7 +1,7 @@
 FROM pandeiro/lein:latest
 
-COPY . /app
-WORKDIR /app
+COPY project.clj /app
 RUN lein deps
+COPY . /app
 
 ENTRYPOINT ["/bin/bash"]
